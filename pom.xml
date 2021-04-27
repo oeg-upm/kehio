@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.upm.fi.oeg</groupId>
+  <artifactId>kehio</artifactId>
+  <version>0.1.0</version>
+  <name>Kehio</name>
+  
+  	<properties>
+	    <maven.compiler.target>1.8</maven.compiler.target>
+    		<maven.compiler.source>1.8</maven.compiler.source>
+	    <maven.compiler.release>14</maven.compiler.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<licenses>
+	  <license>
+	    <name>The Apache License, Version 2.0</name>
+	    <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	  </license>
+	</licenses>
+	
+	  <developers>
+	    <developer>
+	      <name>Andrea Cimmino</name>
+	      <email>cimmino@fi.upm.es</email>
+	      <organization>Universidad Politecnica de Madrid, Ontology Engineering Group</organization>
+	      <organizationUrl>https://www.oeg-upm.net/</organizationUrl>
+	    </developer>
+	  </developers>
+  
+  <dependencies>
+	<!-- Jena: https://mvnrepository.com/artifact/org.apache.jena/apache-jena-libs -->
+	<dependency>
+	    <groupId>org.apache.jena</groupId>
+	    <artifactId>apache-jena-libs</artifactId>
+	    <version>3.17.0</version>
+	    <type>pom</type>
+	</dependency>	
+  
+  </dependencies>
+  
+  
+</project>
