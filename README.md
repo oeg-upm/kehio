@@ -1,1 +1,1 @@
-# KEHIO: a library for blending RDF in Java Object 
+# KEHIO: a library for blending RDF in Java Objects
