@@ -176,7 +176,7 @@ public class Kehio {
 		if(object!=null) {
 			subject = findSubjectResource(fields,object, model);
 			model.remove(subject, RDF.type, Kehio.KEHIO_TYPE);
-
+			
 			for (int index=0; index < fields.length; index++) {
 				Field field = fields[index];
 				field.setAccessible(true);

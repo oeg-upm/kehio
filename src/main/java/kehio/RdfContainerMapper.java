@@ -1,6 +1,7 @@
 package kehio;
 
 import java.lang.reflect.Field;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -121,6 +122,8 @@ class RdfContainerMapper implements RdfMapper{
 
 	private String shortenURI(Model model, String uri) {
 		String shortenUri = model.shortForm(uri);
+		if(uri==shortenUri)
+			shortenUri = model.getProperty(uri).getLocalName();
 		if(shortenUri==null)
 			shortenUri = uri;
 		return shortenUri;
@@ -215,6 +218,12 @@ class RdfContainerMapper implements RdfMapper{
 			String url = prefixes.get(prefix);
 			if(url!=null)
 				computedProperty = ResourceFactory.createProperty(url+value);
+		}
+		try {
+			if(!(new URI(property).isAbsolute()) && prefixes.containsKey("") && !prefixes.get("").isEmpty())
+				computedProperty = ResourceFactory.createProperty(prefixes.get("")+property);
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
 		return computedProperty;
 	}
