@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.upm.fi.oeg</groupId>
 	<artifactId>kehio</artifactId>
-	<version>0.1.2</version>
+	<version>0.1.3</version>
 	<name>Kehio</name>
 	<description>A set of java annotations for round-trip translating between RDF and ORM</description>
 	<url>https://oeg.fi.upm.es/kehio</url>
